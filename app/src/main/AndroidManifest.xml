@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="student.inti.todolist">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DetailsActivity"
+            android:parentActivityName=".ATaskActivity"></activity>
+        <activity
+            android:name=".ATaskActivity"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".SendActivity"
+            android:parentActivityName=".UserListActivity" />
+        <activity
+            android:name=".CalendarActivity"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".UserListActivity"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".CompletedTask"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddActivity"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+    </application>
+
+</manifest>
